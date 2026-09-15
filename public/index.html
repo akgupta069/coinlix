@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CoinLix</title>
+<meta name="description" content="CoinLix: play quick games, earn coins, redeem Free Fire diamonds, BGMI UC, Google Play codes and vouchers. Privacy policy included." />
+<meta name="google-site-verification" content="CjYabj7sRTdjhIiZzVbmiuWdOudoNaLYNfbo7GGQ21M" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>" />
+<style>
+  :root {
+    --purple: #6C5CE7;
+    --purple-dark: #4B3FCB;
+    --teal: #00C2A8;
+    --gold: #F5B60A;
+    --ink: #16142A;
+    --ink-soft: #4A4763;
+    --ink-mute: #7A778F;
+    --paper: #F7F7FC;
+    --card: #FFFFFF;
+    --line: #E8E7F2;
+    --danger: #F0483E;
+    --shadow: 0 12px 32px -12px rgba(22, 20, 42, 0.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --purple: #8B7CF6;
+      --purple-dark: #A99AFF;
+      --teal: #2FE0C4;
+      --gold: #FFC93C;
+      --ink: #EEEDFA;
+      --ink-soft: #C3C1DA;
+      --ink-mute: #8D8AA8;
+      --paper: #100F1D;
+      --card: #191830;
+      --line: #2C2A48;
+      --danger: #FF6B62;
+      --shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--purple); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 4px; }
+
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .brand { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 18px; letter-spacing: -0.01em; }
+  .brand-mark {
+    width: 30px; height: 30px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 15px; flex-shrink: 0;
+    box-shadow: var(--shadow);
+  }
+  .nav-links { display: flex; gap: 26px; font-size: 14px; font-weight: 600; }
+  .nav-links a { color: var(--ink-soft); text-decoration: none; }
+  .nav-links a:hover { color: var(--purple); }
+  @media (max-width: 560px) { .nav-links { display: none; } }
+
+  .hero {
+    padding: 72px 24px 56px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: -180px; left: 50%; transform: translateX(-50%);
+    width: 640px; height: 420px;
+    background: radial-gradient(closest-side, color-mix(in srgb, var(--purple) 22%, transparent), transparent 72%);
+    pointer-events: none;
+  }
+  .hero-icon {
+    width: 84px; height: 84px; border-radius: 24px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 40px; margin: 0 auto 22px;
+    box-shadow: var(--shadow);
+    animation: pop 0.6s cubic-bezier(.2,.9,.3,1.4) both;
+  }
+  @keyframes pop { from { transform: scale(0.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+    text-wrap: balance;
+    position: relative;
+  }
+  h1 span { color: var(--purple); }
+  .hero p.lede {
+    font-size: 18px;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 30px;
+    text-wrap: balance;
+  }
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px; border-radius: 999px;
+    font-weight: 700; font-size: 15px; text-decoration: none;
+    border: 1px solid transparent;
+    transition: transform 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: linear-gradient(135deg, var(--purple), var(--purple-dark)); color: #fff; box-shadow: var(--shadow); }
+  .btn-ghost { background: var(--card); color: var(--ink); border-color: var(--line); }
+
+  .stat-strip {
+    display: flex; justify-content: center; gap: 36px; flex-wrap: wrap;
+    margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--line);
+  }
+  .stat { text-align: center; }
+  .stat b { display: block; font-size: 26px; font-weight: 900; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 12.5px; color: var(--ink-mute); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  section { padding: 64px 0; }
+  .eyebrow {
+    font-size: 12.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--teal); margin: 0 0 10px;
+  }
+  h2 { font-size: clamp(24px, 4vw, 32px); font-weight: 850; letter-spacing: -0.01em; margin: 0 0 12px; text-wrap: balance; }
+  .section-lede { color: var(--ink-soft); max-width: 60ch; margin: 0 0 36px; font-size: 15.5px; }
+
+  .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .feature-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 22px; box-shadow: var(--shadow);
+  }
+  .feature-icon {
+    width: 44px; height: 44px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center; font-size: 21px;
+    margin-bottom: 14px;
+  }
+  .feature-card h3 { font-size: 16.5px; font-weight: 800; margin: 0 0 6px; }
+  .feature-card p { font-size: 14px; color: var(--ink-soft); margin: 0; }
+
+  .games-band { display: flex; flex-wrap: wrap; gap: 8px; }
+  .game-chip {
+    background: var(--card); border: 1px solid var(--line); border-radius: 999px;
+    padding: 8px 14px; font-size: 13.5px; font-weight: 600; color: var(--ink-soft);
+  }
+
+  .rewards-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; }
+  .reward-card { border-radius: 16px; padding: 18px; color: #fff; box-shadow: var(--shadow); }
+  .reward-card b { display: block; font-size: 15.5px; margin-bottom: 3px; }
+  .reward-card span { font-size: 12.5px; opacity: 0.9; }
+
+  .privacy-section { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .privacy-updated { font-size: 13px; color: var(--ink-mute); margin-bottom: 30px; }
+  .privacy-grid { display: grid; grid-template-columns: 200px 1fr; gap: 40px; align-items: start; }
+  @media (max-width: 720px) { .privacy-grid { grid-template-columns: 1fr; gap: 24px; } }
+  .toc { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 9px; }
+  .toc a { font-size: 13.5px; font-weight: 600; color: var(--ink-mute); text-decoration: none; padding: 4px 0; }
+  .toc a:hover { color: var(--purple); }
+  .policy-doc h3 { font-size: 17px; font-weight: 800; margin: 34px 0 10px; scroll-margin-top: 84px; }
+  .policy-doc h3:first-child { margin-top: 0; }
+  .policy-doc p, .policy-doc li { font-size: 15px; color: var(--ink-soft); margin: 0 0 10px; max-width: 68ch; }
+  .policy-doc ul { padding-left: 20px; margin: 0 0 14px; }
+  .policy-doc strong { color: var(--ink); }
+  .policy-table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; font-size: 14px; overflow-x: auto; display: block; }
+  .policy-table thead { display: table-header-group; }
+  .policy-table tbody { display: table-row-group; }
+  .policy-table tr { display: table-row; }
+  .policy-table th, .policy-table td { display: table-cell; text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+  .policy-table th { color: var(--ink-mute); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; }
+
+  footer { padding: 40px 24px 56px; text-align: center; }
+  footer .brand { justify-content: center; margin-bottom: 14px; }
+  footer p { font-size: 13.5px; color: var(--ink-mute); margin: 4px 0; }
+  footer a { color: var(--ink-soft); text-decoration: none; font-weight: 600; }
+  footer a:hover { color: var(--purple); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-row">
+    <div class="brand"><span class="brand-mark">🪙</span> CoinLix</div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#games">Games</a>
+      <a href="#rewards">Rewards</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="hero-icon">🪙</div>
+    <h1>CoinLix<br /><span>Play a little. Earn something real.</span></h1>
+    <p class="lede">CoinLix turns spare minutes into coins — spin, quiz, tap, and match your way to Free Fire diamonds, BGMI UC, Google Play credit, and gift vouchers.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">📱 Coming soon to Google Play</a>
+      <a class="btn btn-ghost" href="#privacy">Read the privacy policy</a>
+    </div>
+    <div class="stat-strip">
+      <div class="stat"><b>20</b><span>Games</span></div>
+      <div class="stat"><b>4</b><span>Reward brands</span></div>
+      <div class="stat"><b>2-tier</b><span>Referrals</span></div>
+      <div class="stat"><b>Free</b><span>Always</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="features">
+  <div class="wrap">
+    <p class="eyebrow">What's inside</p>
+    <h2>One app, four ways to earn</h2>
+    <p class="section-lede">No hidden stakes, no losing coins you've already earned — every activity in CoinLix only ever adds to your balance.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon" style="background:color-mix(in srgb, var(--purple) 16%, transparent); color:var(--purple);">🎮</div>
+        <h3>20 quick games</h3>
+        <p>From reflex taps to memory sequences to trivia — short, replayable rounds that pay out in coins.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:color-mix(in srgb, var(--gold) 20%, transparent); color:#8A6A00;">🎁</div>
+        <h3>Daily check-in streaks</h3>
+        <p>A 7-day streak with escalating rewards — miss a day and it resets, so consistency pays.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:color-mix(in srgb, var(--teal) 18%, transparent); color:var(--teal);">👛</div>
+        <h3>Real redeem catalog</h3>
+        <p>Free Fire diamonds, BGMI UC, Google Play codes, and Amazon/Flipkart/Myntra vouchers.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon" style="background:color-mix(in srgb, var(--danger) 14%, transparent); color:var(--danger);">👥</div>
+        <h3>Two-tier referrals</h3>
+        <p>Earn when a friend joins with your code — and a smaller bonus when their friends join too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <div class="wrap">
+    <p class="eyebrow">The lineup</p>
+    <h2>Twenty games, zero downloads-within-downloads</h2>
+    <p class="section-lede">Everything runs natively in CoinLix — tap a game and you're playing in under a second.</p>
+    <div class="games-band">
+      <span class="game-chip">🎡 Lucky Spin</span>
+      <span class="game-chip">🧠 Quiz Rush</span>
+      <span class="game-chip">🎟️ Scratch Card</span>
+      <span class="game-chip">💥 Tap Blast</span>
+      <span class="game-chip">🃏 Memory Match</span>
+      <span class="game-chip">🏃 Coin Runner</span>
+      <span class="game-chip">🔢 Number Rush</span>
+      <span class="game-chip">🫧 Bubble Pop</span>
+      <span class="game-chip">🎨 Color Match</span>
+      <span class="game-chip">🔤 Word Scramble</span>
+      <span class="game-chip">❓ True or False</span>
+      <span class="game-chip">🧩 Emoji Riddle</span>
+      <span class="game-chip">🔍 Odd One Out</span>
+      <span class="game-chip">⚡ Reflex Tap</span>
+      <span class="game-chip">🔨 Whack-a-Mole</span>
+      <span class="game-chip">🎈 Balloon Burst</span>
+      <span class="game-chip">🔢 Sequence Tap</span>
+      <span class="game-chip">🎵 Simon Says</span>
+      <span class="game-chip">🎲 Lucky Dice</span>
+      <span class="game-chip">🪙 Coin Flip</span>
+    </div>
+  </div>
+</section>
+
+<section id="rewards">
+  <div class="wrap">
+    <p class="eyebrow">Redeem</p>
+    <h2>Coins that turn into things you'd actually buy</h2>
+    <p class="section-lede">The catalog is config-driven, so denominations and coin costs may change — always shown in-app before you redeem.</p>
+    <div class="rewards-row">
+      <div class="reward-card" style="background:linear-gradient(135deg,#FF6B2B,#D4500F);"><b>💎 Free Fire</b><span>Diamonds, 6 tiers</span></div>
+      <div class="reward-card" style="background:linear-gradient(135deg,#1A6ED4,#124F9C);"><b>🎯 BGMI</b><span>UC, 6 tiers</span></div>
+      <div class="reward-card" style="background:linear-gradient(135deg,#1DB954,#128C3E);"><b>🎮 Google Play</b><span>Redeem codes, 6 tiers</span></div>
+      <div class="reward-card" style="background:linear-gradient(135deg,#FF9900,#CC7A00);"><b>🛒 Vouchers</b><span>Amazon, Flipkart, Myntra</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="privacy-section">
+  <div class="wrap">
+    <p class="eyebrow">Legal</p>
+    <h2>Privacy Policy</h2>
+    <p class="privacy-updated">Effective and last updated: 26 July 2026</p>
+
+    <div class="privacy-grid">
+      <nav class="toc" aria-label="Privacy policy sections">
+        <a href="#p-overview">Overview</a>
+        <a href="#p-collect">What we collect</a>
+        <a href="#p-use">How we use it</a>
+        <a href="#p-share">Sharing</a>
+        <a href="#p-guest">Guest mode</a>
+        <a href="#p-security">Security</a>
+        <a href="#p-retention">Retention &amp; deletion</a>
+        <a href="#p-children">Children</a>
+        <a href="#p-ads">Ads &amp; monetization</a>
+        <a href="#p-changes">Changes</a>
+        <a href="#p-contact">Contact</a>
+        <a href="#delete-account">Delete account</a>
+      </nav>
+
+      <div class="policy-doc">
+        <h3 id="p-overview">Overview</h3>
+        <p>CoinLix ("the app", "we", "us") is a casual games and rewards app published by an independent developer for the Indian market. This policy explains what information the app collects, why, and the choices you have. It applies to the CoinLix Android app and this page.</p>
+
+        <h3 id="p-collect">What we collect</h3>
+        <p>CoinLix collects the minimum needed to keep your coin balance safe across devices and to run the referral program:</p>
+        <table class="policy-table">
+          <thead><tr><th>Data</th><th>When</th><th>Why</th></tr></thead>
+          <tbody>
+            <tr><td>Name, email, profile photo</td><td>Only if you choose "Sign in with Google"</td><td>Create your account, show your profile, sync coins to the cloud</td></tr>
+            <tr><td>Coin balance &amp; transaction history</td><td>As you play, check in, or redeem</td><td>Track earnings and redemptions accurately</td></tr>
+            <tr><td>Referral code &amp; referral relationships</td><td>When you share or enter a code</td><td>Credit the right accounts for the two-tier referral program</td></tr>
+            <tr><td>Daily check-in streak</td><td>As you check in</td><td>Calculate your current streak and reward tier</td></tr>
+          </tbody>
+        </table>
+        <p>We do not request access to your contacts, camera, microphone, precise location, or files.</p>
+
+        <h3 id="p-use">How we use it</h3>
+        <ul>
+          <li>To operate core features — coin balance, wallet, games, referrals, and daily check-in.</li>
+          <li>To keep your progress in sync if you use CoinLix on more than one device.</li>
+          <li>To detect obvious abuse of the referral or reward system (for example, self-referrals).</li>
+        </ul>
+        <p>We do not use your data for purposes unrelated to running the app, and we do not build advertising profiles from it.</p>
+
+        <h3 id="p-share">Sharing</h3>
+        <p>We do not sell your personal information. It is shared only with the infrastructure providers that run CoinLix:</p>
+        <ul>
+          <li><strong>Google Firebase</strong> (Authentication &amp; Firestore database) — hosts your account and app data. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+        </ul>
+        <p>We may disclose information if required by law, or to protect the security of the app and its users.</p>
+
+        <h3 id="p-guest">Guest mode</h3>
+        <p>You can use CoinLix without signing in. In guest mode, your coins and activity are stored <strong>only on your device</strong> (never uploaded to our servers) and are lost if you uninstall the app or clear its data. Signing in with Google later carries your guest progress into your synced account.</p>
+
+        <h3 id="p-security">Security</h3>
+        <p>Your account data is protected by Firebase security rules that restrict every user's data to that user alone — no other account can read or write it. No method of transmission or storage is 100% secure, but we apply industry-standard practices throughout.</p>
+
+        <h3 id="p-retention">Retention &amp; deletion</h3>
+        <p>We keep your account data for as long as your account is active. To request deletion of your account and associated data, email us at the address below — we'll action verified requests within 30 days.</p>
+
+        <h3 id="p-children">Children</h3>
+        <p>CoinLix is not directed at children under 13, and we do not knowingly collect personal information from them. If you believe a child has provided us information, contact us and we'll remove it.</p>
+
+        <h3 id="p-ads">Ads &amp; monetization</h3>
+        <p>CoinLix does not currently show third-party ads — in-app "watch an ad to claim" moments are placeholders while the reward economy is tuned. If real ad partners are introduced, this policy will be updated first, and ad networks will only receive the minimum data required for ad delivery under their own privacy terms.</p>
+
+        <h3 id="p-changes">Changes to this policy</h3>
+        <p>We may update this policy as the app evolves. Material changes will update the "last updated" date above; continued use of CoinLix after a change means you accept the revised policy.</p>
+
+        <h3 id="p-contact">Contact</h3>
+        <p>Questions about this policy or your data — including deletion requests — go to <a href="mailto:kushal142529@gmail.com">kushal142529@gmail.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="delete-account" class="privacy-section">
+  <div class="wrap">
+    <p class="eyebrow">Your data</p>
+    <h2>Delete Your Account &amp; Data</h2>
+    <p class="privacy-updated">How to permanently delete your CoinLix account, coin balance, and personal data.</p>
+
+    <div class="policy-doc" style="max-width:68ch;">
+      <h3>How to request deletion</h3>
+      <p>CoinLix does not yet have an in-app self-service delete button, so deletion requests are handled by email:</p>
+      <ul>
+        <li>Send an email to <a href="mailto:kushal142529@gmail.com?subject=Delete%20my%20CoinLix%20account">kushal142529@gmail.com</a> from the same email address you used to sign in with Google.</li>
+        <li>Use the subject line <strong>"Delete my CoinLix account"</strong> and mention the email/Google account linked to the app.</li>
+        <li>We verify the request and permanently delete your account within <strong>30 days</strong>.</li>
+      </ul>
+
+      <h3>What gets deleted</h3>
+      <ul>
+        <li>Your Firebase Authentication account (name, email, profile photo).</li>
+        <li>Your coin balance and full transaction history.</li>
+        <li>Your referral code, referral relationships, and referral earnings records.</li>
+        <li>Your daily check-in streak and profile data.</li>
+      </ul>
+      <p>This deletion is permanent and cannot be undone — any unredeemed coin balance is also removed.</p>
+
+      <h3>Guest mode accounts</h3>
+      <p>If you used CoinLix without signing in, your data was only ever stored on your device and never uploaded to our servers. Uninstalling the app or clearing its storage from your phone's Settings deletes it immediately — no email request needed.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="brand"><span class="brand-mark">🪙</span> CoinLix</div>
+  <p>Play &amp; earn, built for the Indian market.</p>
+  <p><a href="mailto:kushal142529@gmail.com">kushal142529@gmail.com</a></p>
+  <p>© 2026 CoinLix. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

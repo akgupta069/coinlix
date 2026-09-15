@@ -1,0 +1,78 @@
+{
+  "expo": {
+    "name": "CoinLix",
+    "slug": "coinlix",
+    "scheme": "coinlix",
+    "version": "1.0.9",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.coinlix.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.coinlix.app",
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 42,
+      "permissions": ["com.google.android.gms.permission.AD_ID"],
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "category": [
+            "DEFAULT",
+            "BROWSABLE"
+          ],
+          "data": [
+            {
+              "scheme": "com.coinlix.app"
+            }
+          ]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {}
+    },
+    "plugins": [
+      "expo-asset",
+      "expo-web-browser",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-3712414184705571~4612775765",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+        }
+      ],
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "1593019872361814",
+          "clientToken": "5f4429617d07df3ec6be673de1893c95",
+          "displayName": "CoinLix",
+          "scheme": "fb1593019872361814",
+          "isAutoInitEnabled": true,
+          "autoLogAppEventsEnabled": true,
+          "advertiserIDCollectionEnabled": true
+        }
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/analytics"
+    ]
+  }
+}

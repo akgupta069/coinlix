@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "coinlix-9c50b"
+  },
+  "targets": {
+    "coinlix-9c50b": {
+      "hosting": {
+        "main": [
+          "coinlix-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

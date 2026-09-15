@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delete Your Account — CoinLix</title>
+<meta name="description" content="How to permanently delete your CoinLix account, coin balance, and personal data." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪙</text></svg>" />
+<style>
+  :root {
+    --purple: #6C5CE7;
+    --purple-dark: #4B3FCB;
+    --teal: #00C2A8;
+    --ink: #16142A;
+    --ink-soft: #4A4763;
+    --ink-mute: #7A778F;
+    --paper: #F7F7FC;
+    --card: #FFFFFF;
+    --line: #E8E7F2;
+    --shadow: 0 12px 32px -12px rgba(22, 20, 42, 0.18);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --purple: #8B7CF6;
+      --purple-dark: #A99AFF;
+      --teal: #2FE0C4;
+      --ink: #EEEDFA;
+      --ink-soft: #C3C1DA;
+      --ink-mute: #8D8AA8;
+      --paper: #100F1D;
+      --card: #191830;
+      --line: #2C2A48;
+      --shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.5);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--purple); }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 56px 24px 80px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; margin-bottom: 40px; }
+  .brand-mark {
+    width: 32px; height: 32px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px; flex-shrink: 0; box-shadow: var(--shadow);
+  }
+  .eyebrow {
+    font-size: 12.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase;
+    color: var(--teal); margin: 0 0 10px;
+  }
+  h1 { font-size: clamp(26px, 5vw, 34px); font-weight: 850; letter-spacing: -0.01em; margin: 0 0 12px; }
+  .lede { font-size: 15.5px; color: var(--ink-soft); margin: 0 0 36px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px 26px; margin-bottom: 20px; box-shadow: var(--shadow);
+  }
+  .card h2 { font-size: 17px; font-weight: 800; margin: 0 0 10px; }
+  .card p, .card li { font-size: 15px; color: var(--ink-soft); margin: 0 0 10px; }
+  .card ul { padding-left: 20px; margin: 0; }
+  .card li { margin-bottom: 8px; }
+  .card strong { color: var(--ink); }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 24px; border-radius: 999px;
+    font-weight: 700; font-size: 15px; text-decoration: none;
+    background: linear-gradient(135deg, var(--purple), var(--purple-dark)); color: #fff;
+    box-shadow: var(--shadow); margin-top: 4px;
+  }
+  footer { margin-top: 40px; font-size: 13px; color: var(--ink-mute); }
+  footer a { color: var(--ink-mute); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand"><span class="brand-mark">🪙</span> CoinLix</div>
+
+  <p class="eyebrow">Your data</p>
+  <h1>Delete Your Account &amp; Data</h1>
+  <p class="lede">How to permanently delete your CoinLix account, coin balance, and personal data.</p>
+
+  <div class="card">
+    <h2>How to request deletion</h2>
+    <p>CoinLix does not yet have an in-app self-service delete button, so deletion requests are handled by email:</p>
+    <ul>
+      <li>Send an email to <strong>kushal142529@gmail.com</strong> from the same email address you used to sign in with Google.</li>
+      <li>Use the subject line <strong>"Delete my CoinLix account"</strong> and mention the email/Google account linked to the app.</li>
+      <li>We verify the request and permanently delete your account within <strong>30 days</strong>.</li>
+    </ul>
+    <a class="btn-primary" href="mailto:kushal142529@gmail.com?subject=Delete%20my%20CoinLix%20account">✉️ Request account deletion</a>
+  </div>
+
+  <div class="card">
+    <h2>What gets deleted</h2>
+    <ul>
+      <li>Your Firebase Authentication account (name, email, profile photo).</li>
+      <li>Your coin balance and full transaction history.</li>
+      <li>Your referral code, referral relationships, and referral earnings records.</li>
+      <li>Your daily check-in streak and profile data.</li>
+    </ul>
+    <p>This deletion is permanent and cannot be undone — any unredeemed coin balance is also removed.</p>
+  </div>
+
+  <div class="card">
+    <h2>Guest mode accounts</h2>
+    <p>If you used CoinLix without signing in, your data was only ever stored on your device and never uploaded to our servers. Uninstalling the app or clearing its storage from your phone's Settings deletes it immediately — no email request needed.</p>
+  </div>
+
+  <footer>
+    <a href="/">← Back to CoinLix home</a> · <a href="/#privacy">Privacy Policy</a>
+  </footer>
+</div>
+</body>
+</html>

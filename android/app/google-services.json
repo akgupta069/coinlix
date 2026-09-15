@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "460317068613",
+    "project_id": "coinlix-9c50b",
+    "storage_bucket": "coinlix-9c50b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460317068613:android:53ec233193d64f390bc22c",
+        "android_client_info": {
+          "package_name": "com.coinlix.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460317068613-oas8vmm4aklk1h6l36sqhrdjhav2ljtk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coinlix.app",
+            "certificate_hash": "efc9f8d8b1813952f7df0946fd5489c4d185cad8"
+          }
+        },
+        {
+          "client_id": "460317068613-slp262tb2jaa8p1gbc7esp3jmsm4sbqr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coinlix.app",
+            "certificate_hash": "65e5ac4b79bd0f6d00ece3a8c7bde094cfd43aac"
+          }
+        },
+        {
+          "client_id": "460317068613-uqn4afoe8eacrv44n008o13fdumdb4gs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYdYndpj9C0HSOVEcgXNbOXmhjYLX0FsM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460317068613-uqn4afoe8eacrv44n008o13fdumdb4gs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

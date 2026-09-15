@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">CoinLix</string>
+  <string name="expo_splash_screen_resize_mode" translatable="false">contain</string>
+  <string name="expo_splash_screen_status_bar_translucent" translatable="false">false</string>
+  <string name="facebook_app_id">1593019872361814</string>
+  <string name="facebook_client_token">5f4429617d07df3ec6be673de1893c95</string>
+  <string name="fb_login_protocol_scheme">fb1593019872361814</string>
+</resources>
